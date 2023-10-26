@@ -177,11 +177,11 @@ def login123():
 
 def publikv2():
     with requests.Session() as ses:
-        banner()
         token = open('.token.txt','r').read()
         cok = open('.cok.txt','r').read()
-        a = console.input(f" • Masukan Id Target : ")
-        filetex = console.input(f" • Nama File Dump  : ")
+        print(f"{kun}╭────────────────────────────────────────────{puti}")
+        a = input('└──[ masukan id target: ')
+        filetex = input(f" [+] Nama File Dump  : ")
         rspd  = ('/sdcard/RUDAL-DUMP/' + filetex + '.txt').replace(' ', '_')
         koli = open(rspd, 'w')
         try:
@@ -195,8 +195,8 @@ def publikv2():
                 koli.write(c['id']+'|'+c['name']+ '\n')
                 print('\r  Mengumpulkan %s Id'%(len(id)),end='')
                 time.sleep(0.0050)
-            console.print(' {H2}• {P2}Total Id Dump : {}'.format(len(id)))
-            console.print(' {H2}• {P2}File Disimpan Di %s'%(rspd))
+            print(f"{kun}╭────────────────────────────────────────────{puti}")
+            print('└──[ Total Idz : {}'.format(len(id)))
             exit()
         except Exception as e:
             print(e)
