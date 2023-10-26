@@ -198,7 +198,7 @@ def publikv2():
             console.print(f' {H2}• {P2}Total Id Dump :{H2} %s {P2} '%(len(id)))
             console.print(f' {H2}• {P2}File Disimpan Di {H2}%s{P2}'%(rspd))
             time.sleep(3)
-            exit('\n{H2}Thank Sudah Mengunakan Script Ini{P2}\n')
+            exit('\nThank Sudah Mengunakan Script Ini\n')
         except Exception as e:
             print(e)
             
