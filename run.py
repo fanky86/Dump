@@ -180,7 +180,7 @@ def publikv2():
         banner()
         token = open('.token.txt','r').read()
         cok = open('.cok.txt','r').read()
-        a = console.input(" • Masukan Id Target : ")
+        a = console.input(f" {H2}• {P2} Masukan Id Target : ")
         filetex = console.input(f" {H2}• {P2}Nama File Dump  : ")
         rspd  = ('/sdcard/RUDAL-DUMP/' + filetex + '.txt').replace(' ', '_')
         koli = open(rspd, 'w')
@@ -193,10 +193,10 @@ def publikv2():
             for c in b["friends"]["data"]:
                 id.append(c["id"]+"|"+c["name"])
                 koli.write(c['id']+'|'+c['name']+ '\n')
-                print('\r  Mengumpulkan %s Id'%(len(id)),end='\r')
+                console.print(f'\r {H2}• {P2}Mengumpulkan {H2} %s {P2}Id'%(len(id)),end='\r')
                 time.sleep(0.0050)
-            console.print(f' {H2}• {P2}Total Id Dump : %s'%(len(id)))
-            console.print(f' {H2}• {P2}File Disimpan Di %s'%(rspd))
+            console.print(f' {H2}• {P2}Total Id Dump :{H2} %s{P2}'%(len(id)))
+            console.print(f' {H2}• {P2}File Disimpan Di {U2}%s{P2}'%(rspd))
             exit()
         except Exception as e:
             print(e)
