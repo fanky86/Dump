@@ -137,7 +137,7 @@ def login():
             sy = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':cok})
             sy2 = json.loads(sy.text)['name']
             sy3 = json.loads(sy.text)['id']
-            publikv2(sy2,sy3)
+            publikv2()
         except KeyError:
             login123()
         except requests.exceptions.ConnectionError:
