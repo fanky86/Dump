@@ -180,8 +180,8 @@ def publikv2():
         banner()
         token = open('.token.txt','r').read()
         cok = open('.cok.txt','r').read()
-        a = console.input(" {H2}• {P2}Masukan Id Target : ")
-        filetex = console.input(" {H2}• {P2}Nama File Dump  : ")
+        a = console.input(f" {H2}• {P2}Masukan Id Target : ")
+        filetex = console.input(f" {H2}• {P2}Nama File Dump  : ")
         rspd  = ('/sdcard/RUDAL-DUMP/' + filetex + '.txt').replace(' ', '_')
         koli = open(rspd, 'w')
         try:
@@ -195,8 +195,7 @@ def publikv2():
                 koli.write(c['id']+'|'+c['name']+ '\n')
                 print('\r  Mengumpulkan %s Id'%(len(id)),end='')
                 time.sleep(0.0050)
-            console.print(' {H2}• {P2}Total Id Dump : {}'.format(len(id)))
-            console.print(' {H2}• {P2}File Disimpan Di %s'%(rspd))
+            print('└──[ Total Idz : {}'.format(len(id)))
             exit()
         except Exception as e:
             print(e)
