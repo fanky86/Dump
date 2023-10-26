@@ -128,13 +128,31 @@ def banner():
 [bold white]███████████████████████          
 [bold white]███████████████████████ 
 [bold white]""",width=80,style=f"{color_panel}"))
-    
 def login():
+    try:
+        token = open('.token.txt','r').read()
+        cok = open('.cok.txt','r').read()
+        tokenku.append(token)
+        try:
+            sy = requests.get('https://graph.facebook.com/me?fields=id,name&access_token='+tokenku[0], cookies={'cookie':cok})
+            sy2 = json.loads(sy.text)['name']
+            sy3 = json.loads(sy.text)['id']
+            publikv2(sy2,sy3)
+        except KeyError:
+            login123()
+        except requests.exceptions.ConnectionError:
+            Console().print("[bold cyan]   ╰─>[bold red] Problem Internet Connection, Check And Try Again")
+            exit()
+    except IOError:
+        login123()
+        
+        
+def login123():
     try:
         os.system('clear')
         banner() 
         asu = random.choice([m,k,h,b,u])
-        cookie=input(f'\n{x}[{h}+{x}] Masukkan Cookies :{asu} ')
+        cookie=console.input(f' {H2}• {P2}\nMasukkan Cookies :{asu} ')
         cookies = {'cookie':cookie}
         url = 'https://www.facebook.com/adsmanager/manage/campaigns'
         req = ses.get(url,cookies=cookies)
@@ -144,12 +162,12 @@ def login():
         tok = re.search('accessToken="(.*?)"',str(roq.content)).group(1)
         ken = open(".token.txt", "w").write(tok)
         cok = open(".cok.txt", "w").write(cookie)
-        print(f'  {x}[{h}√{x}]{h} LOGIN BERHASIL KONTOL.........Jalankan Lagi Perintahnya!!!!{x} ');time.sleep(1)
+        console.print(f' {H2}• {P2}LOGIN BERHASIL KONTOL..Jalankan Lagi Perintahnya!!!!');time.sleep(1)
         exit()
     except Exception as e:
         os.system("rm -f .token.txt")
         os.system("rm -f .cok.txt")
-        print(f'  %s[%sx%s]%s LOGIN GAGAL.....CEK TUMBAL LUU NGAB !!%s'%(x,k,x,m,x))
+        console.print(f' {H2}• {P2}LOGIN GAGAL.....CEK TUMBAL LUU NGAB !!')
 
 
 def publikv2():
