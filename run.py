@@ -26,6 +26,7 @@ from rich.console import Console as sol
 
 console = Console()
 tokenku=[]
+id=[]
 sys.stdout.write('\x1b]2; Dump ID Facebook\x07')
 
 #------------[ INDICATION ]---------------#
