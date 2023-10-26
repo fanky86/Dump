@@ -180,8 +180,8 @@ def publikv2():
         banner()
         token = open('.token.txt','r').read()
         cok = open('.cok.txt','r').read()
-        a = console.input(f" {H2}• {P2}Masukan Id Target : ")
-        filetex = console.input(f" {H2}• {P2}Nama File Dump  : ")
+        a = console.input(" {H2}• {P2}Masukan Id Target : ")
+        filetex = console.input(" {H2}• {P2}Nama File Dump  : ")
         rspd  = ('/sdcard/RUDAL-DUMP/' + filetex + '.txt').replace(' ', '_')
         koli = open(rspd, 'w')
         try:
