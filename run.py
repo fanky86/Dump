@@ -193,7 +193,7 @@ def publikv2():
             for c in b["friends"]["data"]:
                 id.append(c["id"]+"|"+c["name"])
                 koli.write(c['id']+'|'+c['name']+ '\n')
-                print('\r  Mengumpulkan %s Id'%(len(id)),end='')
+                print('\r  Mengumpulkan %s Id'%(len(id)),end='\r')
                 time.sleep(0.0050)
             console.print(f' {H2}• {P2}Total Id Dump : %s'%(len(id)))
             console.print(f' {H2}• {P2}File Disimpan Di %s'%(rspd))
