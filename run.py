@@ -1,4 +1,4 @@
-import requests,bs4,json,os,sys,random,datetime,time,re,urllib3,rich,base64,subprocess,uuid,calendar
+import requests,json,os,sys,random,time,re,calendar
 #------------------[  MODULE  ]-------------------#
 try:
         import rich
@@ -16,53 +16,17 @@ except ImportError:
 	print('• Sedang Menginstall Modul requests •')
 	os.system('pip install requests && pip install mechanize ')
 #------------------[ IMPORT MODULE ]-------------------#
-from time import sleep
-from datetime import date,datetime
-from rich import pretty
-from rich.tree import Tree
-from rich.panel import Panel
-from rich import print as cetak
-from rich import print as rprint
-from rich import print as print
-from rich.progress import track
-from rich.text import Text as tekz
-from rich.console import Console
-from rich.text import Text
-from rich.columns import Columns
-from rich.panel import Panel as nel
-from rich.panel import Panel as panel
-from bs4 import BeautifulSoup as sop
-from bs4 import BeautifulSoup as par
-from rich.console import Group as gp
-from bs4 import BeautifulSoup as parser
-from rich.columns import Columns as col
-from rich.console import Console as sol
-from bs4 import BeautifulSoup as beautifulsoup
-from rich.markdown import Markdown as mark
-from concurrent.futures import ThreadPoolExecutor as tred
-from concurrent.futures import ThreadPoolExecutor as BrayennnXD 
-from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn
-from licensing.models import *
-from licensing.methods import Key, Helpers
 
-sekarang = calendar.timegm(time.gmtime(time.time()))
-pretty.install()
-CON=sol()
-wa = Console()
-taplikasi=[]
-gabriel=[]
-uidl =[]
-opsi=[]
-uidf=[]
-free=[]
-liu=[]
-ugent = []
-licenseKey=[]
+from rich import pretty
+from rich.panel import Panel
+from rich import print as print
+from rich.console import Console
+from rich.console import Console as sol
+
+
 console = Console()
-ses=requests.Session()
-id,id2,loop,ok,cp,akun,oprek,lisensiku,tokenku,uid,lisensikuni,method,pwpluss,pwnya= [],[],0,0,0,[],[],[],[],[],[],[],[],[]
-ugen2,ugen,dia,cokbrut,dump,memek,ualu,ualuh,lisensikuni,lisensiku,princp=[],[],[],[],[],[],[],[],[],[],[]
-sys.stdout.write('\x1b]2; BMBF | Multi Brute Facebook\x07')
+tokenku=[]
+sys.stdout.write('\x1b]2; Dump ID Facebook\x07')
 
 #------------[ INDICATION ]---------------#
 M2 = "[#FF0000]" # MERAH
@@ -149,7 +113,8 @@ def login():
         
 def login123():
     try:
-        Console().print(Panel("""[bold white]Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account""",width=80,style=f"{color_panel}", title="SARAN"))
+        banner()
+        Console().print(Panel("""[bold white]Disarankan Untuk Menggunakan Cookie Yang Masih Fresh Untuk Melakukan Crack Account """,width=80,style=f"{color_panel}", title="SARAN"))
         your_cookies = console.input(f" {H2}• {P2}Masukan Cookie : ")
         with requests.Session() as r:
             try:
