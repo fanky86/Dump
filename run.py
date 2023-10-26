@@ -89,7 +89,7 @@ def banner():
 [bold red]███████████████████████             
 [bold red]███████████████████████          [bold yellow]Github    : [bold green]https://github.com/Rudal-XD
 [bold red]███████████████████████          [bold yellow]Wa        : [bold green]+62895386194***
-[bold white]███████████████████████          
+[bold white]███████████████████████          [bold yellow]Informasi : [bold green]File Khusus Dump Id 
 [bold white]███████████████████████          
 [bold white]███████████████████████ 
 [bold white]""",width=80,style=f"{color_panel}"))
@@ -106,7 +106,7 @@ def login():
         except KeyError:
             login123()
         except requests.exceptions.ConnectionError:
-            Console().print("[bold cyan]   ╰─>[bold red] Problem Internet Connection, Check And Try Again")
+            Console().print("[bold cyan] ─>[bold red] Problem Internet Connection, Check And Try Again")
             exit()
     except IOError:
         login123()
@@ -196,10 +196,9 @@ def publikv2():
                 console.print(f'\r {H2}• {P2}Mengumpulkan {H2} %s {P2} Id'%(len(id)),end='\r')
                 time.sleep(0.0050)
             console.print(f' {H2}• {P2}Total Id Dump :{H2} %s {P2} '%(len(id)))
-            console.print(f' {H2}• {P2}File Disimpan Di {U2}%s{P2}'%(rspd))
-            time.sleep(5)
-            login()
-            exit()
+            console.print(f' {H2}• {P2}File Disimpan Di {H2}%s{P2}'%(rspd))
+            time.sleep(3)
+            exit('\n{H2}Thank Sudah Mengunakan Script Ini{P2}\n')
         except Exception as e:
             print(e)
             
